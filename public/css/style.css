@@ -1,0 +1,313 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Comfortaa', cursive;
+    background-color: #f2f7e6;
+}
+a:link {
+  text-decoration: none;
+  color: lightgray;
+}
+
+a:visited {
+  text-decoration: none;
+  color: lightgray;
+
+}
+.navbar{
+    width: 100%;
+    z-index: 103;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+@media screen and (max-width: 620px) {
+  .navbar{
+    background-color: rgb(243 238 238);
+    }
+  .navbar_links ul{
+    display: none;
+    flex-direction: column;
+    margin-top: 3em;
+  }
+  .mobile_menu{
+    display: flex;
+    margin:1em;
+    width: 30px;
+  }
+
+}
+@media screen and (min-width: 620px) {
+  .navbar{
+    background-color: rgba(216, 192, 192, 0.315);
+    }
+  .navbar_links ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0em;
+
+  }
+  .mobile_menu{
+    display: none;
+  }
+}
+.menu_icon_img{
+  max-width: 30px;
+}
+
+.open{
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+.close{
+  display: none;
+  width: 100%;
+  height: 30px;
+}
+.navbar_links ul{
+    align-self: flex-end;   
+    list-style: none;
+    flex-wrap: wrap;
+}
+.navbar_links li{
+    margin-left:1em;
+    margin-right: 1em;
+    margin-top:1em;
+}
+.navbar_brand_img{
+    max-width: 50px;
+    max-height: 50px;
+}
+.navbar_brand{
+    margin-left: 5em;
+    margin-top: 0em;
+}
+.navbar_links{
+    margin-right: 3em;
+    display: flex;
+}
+.header{
+    background-image: url(../img/gyurtBack.png);
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    background-position: 50% 0em;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_logo{
+  width: clamp(200px, 80%, 1060px);
+}
+.content{
+    padding-top: 5em;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.contant_container{
+  margin-top: 3em;
+}
+.game_making_steps_wrap{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+
+}
+.cards_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-around;
+}
+.card{
+    background-color: #e5efce;
+    border-radius: 25px;
+    width: 20em;
+    min-height: 10em;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+.card_title{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.card_btn{
+    padding: 10px;
+    border: 1px;
+    background-color: #9ed39e;
+    width: fit-content;
+    margin-top: 2em;
+    align-self:center;
+}
+.team{
+    margin-top: 3em;
+}
+input, textarea{
+  border: none;
+  min-height: 30px;
+  border-radius: 12px;
+  background-color: rgb(195, 236, 207);
+  color: rgb(65, 65, 65);
+  padding-left: 1em;
+}
+.contact_element{
+  margin-top: 1em;
+}
+.modal_overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    z-index:103;
+    background-color: #c4da90;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+  }
+  
+  .modal_overlay.active {
+    opacity: .6;
+    visibility: visible;
+    transition: opacity 0.5s;
+  }
+  .modal_close{
+    margin-top: 3vw;
+    margin-right: 5vw;
+    position: relative;
+    float: right;
+
+  }
+  .modal_content_wrap{
+    visibility: hidden;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:103;
+    background-color: aliceblue;
+    border-radius: 25px;
+    
+  }
+  .modal_content_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+  }
+  .modal_content_wrap.active{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+    overflow: auto;
+    height: 85%;
+    margin: 5%;
+  }
+  .modal_content{
+    margin: 10vw;
+    line-height: 2;
+    text-align: justify;
+  }
+
+  .modal_Q_content_wrap{
+    visibility: hidden;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:103;
+    background-color: aliceblue;
+    border-radius: 25px;
+    
+  }
+  .modal_Q_content_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+  }
+  .modal_Q_content_wrap.active{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+    overflow: auto;
+    max-height: 80%;
+    margin: 5%;
+    min-width: 90%;
+    background-image: url(../assets/gyurtBack.png);
+    background-size: cover;
+  }
+  .modal_Q_content{
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .valaszok{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3vw;
+  }
+  .valasz{
+    margin-left: 2em;
+    margin-right: 2em;
+    cursor: pointer;
+  }
+  .footer {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: lightgray;
+    align-items: center;
+  }
+  .footer_links{
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer_link{
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .social_icon{
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size: xx-large;
+  }
+  .footer_copyright{
+    font-size: smaller;
+  }
+  div::-webkit-scrollbar {
+      width: 6px;
+  }
+  div::-webkit-scrollbar-track {
+      background: gainsboro;
+      border-radius: 5px;
+  }
+  div::-webkit-scrollbar-thumb {
+      background: black;
+      border-radius: 5px;
+  }
+  div::-webkit-scrollbar-thumb:hover {
+      background: #555;
+  }
